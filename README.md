@@ -4,8 +4,8 @@ Site web personnel réalisé dans le cadre du **Travail Pratique 3** du cours *T
 
 RPM Québec est le site compagnon d'une chaîne YouTube consacrée à la moto : routes recommandées au Québec, tutoriels d'entretien et de conduite, sécurité, et réglementation du permis moto.
 
-- **Dépôt Git :** https://github.com/camilosolano13/TP3_SolanoCamilo *(à remplacer par l'URL réelle une fois le dépôt créé)*
-- **Site hébergé (GitHub Pages) :** https://camilosolano13.github.io/TP3_SolanoCamilo/ *(actif une fois GitHub Pages activé — voir plus bas)*
+- **Dépôt Git :** https://github.com/camilosolano13-jpg/TP3_SolanoCamilo *(à remplacer par l'URL réelle une fois le dépôt créé)*
+- **Site hébergé (GitHub Pages) :** https://camilosolano13-jpg.github.io/TP3_SolanoCamilo/ *(actif une fois GitHub Pages activé — voir plus bas)*
 
 ## Aperçu des pages
 
