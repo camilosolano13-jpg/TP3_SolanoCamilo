@@ -1,5 +1,5 @@
 /**
- * RPM Québec — validation.js
+ * camibike360 — validation.js
  * Validation JavaScript personnalisée du formulaire de contact.
  * La validation HTML5 native est désactivée via l'attribut `novalidate`
  * sur le formulaire (voir contact.html) ; toutes les règles ci-dessous

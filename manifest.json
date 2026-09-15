@@ -1,7 +1,7 @@
 {
-  "name": "RPM Québec — Motos, routes et vitesse",
-  "short_name": "RPM Québec",
-  "description": "Site compagnon de la chaîne YouTube RPM Québec : routes recommandées, tutoriels d'entretien et de conduite, sécurité et réglementation moto au Québec.",
+  "name": "camibike360 — Motos, routes et vitesse",
+  "short_name": "camibike360",
+  "description": "Site compagnon de la chaîne YouTube camibike360 : routes recommandées, tutoriels d'entretien et de conduite, sécurité et réglementation moto au Québec.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -49,7 +49,7 @@
       "sizes": "1280x800",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Page d'accueil de RPM Québec"
+      "label": "Page d'accueil de camibike360"
     }
   ]
 }

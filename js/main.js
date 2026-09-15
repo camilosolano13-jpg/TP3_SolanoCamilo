@@ -1,5 +1,5 @@
 /**
- * RPM Québec — main.js
+ * camibike360 — main.js
  * Regroupe : menu mobile, révélation au défilement (IntersectionObserver),
  * accordéon FAQ, filtre de tutoriels par catégorie, et enregistrement du
  * Service Worker (PWA) + invite d'installation.

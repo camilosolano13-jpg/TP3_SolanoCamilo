@@ -1,11 +1,11 @@
 /**
- * RPM Québec — Service Worker
+ * camibike360 — Service Worker
  * Stratégie : "app shell" précaché à l'installation, cache-first pour les
  * ressources statiques (CSS/JS/icônes), et network-first avec repli sur le
  * cache (puis sur offline.html) pour les pages HTML, afin que le site reste
  * pleinement utilisable hors-ligne.
  */
-const CACHE_NAME = "rpm-quebec-v1";
+const CACHE_NAME = "camibike360-v2";
 const OFFLINE_URL = "offline.html";
 
 const PRECACHE_URLS = [

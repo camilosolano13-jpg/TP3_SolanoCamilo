@@ -1,11 +1,11 @@
-# RPM Québec — TP3_SolanoCamilo
+# camibike360 — TP3_SolanoCamilo
 
 Site web personnel réalisé dans le cadre du **Travail Pratique 3** du cours *Technique d'intégration des interfaces Web 2*.
 
-RPM Québec est le site compagnon d'une chaîne YouTube consacrée à la moto : routes recommandées au Québec, tutoriels d'entretien et de conduite, sécurité, et réglementation du permis moto.
+camibike360 est le site compagnon d'une chaîne YouTube consacrée à la moto : routes recommandées au Québec, tutoriels d'entretien et de conduite, sécurité, et réglementation du permis moto.
 
-- **Dépôt Git :** https://github.com/camilosolano13-jpg/TP3_SolanoCamilo *(à remplacer par l'URL réelle une fois le dépôt créé)*
-- **Site hébergé (GitHub Pages) :** https://camilosolano13-jpg.github.io/TP3_SolanoCamilo/ *(actif une fois GitHub Pages activé — voir plus bas)*
+- **Dépôt Git :** https://github.com/camilosolano13-jpg/TP3_SolanoCamilo
+- **Site hébergé (GitHub Pages) :** https://camilosolano13-jpg.github.io/TP3_SolanoCamilo/
 
 ## Aperçu des pages
 
