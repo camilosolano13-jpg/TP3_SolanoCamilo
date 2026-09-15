@@ -106,13 +106,15 @@
       return;
     }
 
-    /* Aucun serveur pour ce projet scolaire : on simule un envoi réussi */
-    status.textContent = "Merci ! Votre message a bien été reçu, je vous répondrai dès que possible.";
-    status.classList.add("form__status--success");
+    /* Aucun serveur pour ce projet scolaire : on simule un envoi réussi.
+       form.reset() déclenche l'événement "reset" (qui vide le message de
+       statut) : on l'appelle donc AVANT d'afficher le message de succès. */
     form.reset();
     Object.keys(rules).forEach(function (fieldName) {
       setFieldValidity(fieldName, true);
     });
+    status.textContent = "Merci ! Votre message a bien été reçu, je vous répondrai dès que possible.";
+    status.classList.add("form__status--success");
   });
 
   form.addEventListener("reset", function () {
