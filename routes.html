@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Routes recommandées — RPM Québec</title>
+  <meta name="description" content="Découvrez les plus belles routes à moto du Québec : difficulté, distance et vidéos sur chaque trajet.">
+  <meta name="theme-color" content="#0D0D0D">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__brand">RPM <span class="navbar__brand-accent">Québec</span></a>
+        <div class="navbar__toggle">
+          <button type="button" class="navbar__toggle-btn" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Ouvrir le menu</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+        <ul class="navbar__menu" id="navMenu">
+          <li><a href="index.html" class="navbar__link">Accueil</a></li>
+          <li><a href="routes.html" class="navbar__link navbar__link--active" aria-current="page">Routes</a></li>
+          <li><a href="tutoriels.html" class="navbar__link">Tutoriels &amp; Conseils</a></li>
+          <li><a href="permis.html" class="navbar__link">Permis &amp; Réglementation</a></li>
+          <li><a href="contact.html" class="navbar__link">À propos / Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ================= INTRO ================= -->
+    <section class="hero" aria-labelledby="routes-title">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__grid !py-14 sm:!py-16">
+        <div class="col-span-12 reveal reveal--visible">
+          <span class="hero__eyebrow">Carnet de routes</span>
+          <h1 id="routes-title" class="hero__title text-3xl sm:text-5xl">Les routes qui valent le détour</h1>
+          <p class="hero__subtitle">Une sélection personnelle de trajets à travers le Québec, testés sur ma propre moto, classés par difficulté et distance pour planifier votre prochaine sortie.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERIE DE ROUTES ================= -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="galerie-title">
+      <h2 id="galerie-title" class="section-title reveal" data-reveal>Galerie de routes recommandées</h2>
+      <p class="section-subtitle reveal" data-reveal>Cliquez sur une route pour voir la vidéo associée sur la chaîne.</p>
+
+      <div class="mt-8 grid grid-cols-12 gap-6">
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 100 Q60 20 100 60 T190 30" fill="none" stroke="#FF6B35" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Route 132 — Gaspésie</h3>
+              <span class="badge badge--medium">Modérée</span>
+            </div>
+            <p class="card__text">Le tour de la péninsule gaspésienne, mer d'un côté, montagnes de l'autre. Le classique absolu.</p>
+          </div>
+          <div class="card__footer">
+            <span>885 km · 2-3 jours</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 60 H190" stroke="#FF6B35" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Chemin du Roy — Route 138</h3>
+              <span class="badge badge--easy">Facile</span>
+            </div>
+            <p class="card__text">Villages historiques et fleuve Saint-Laurent, entre Québec et Montréal. Parfait pour débuter.</p>
+          </div>
+          <div class="card__footer">
+            <span>280 km · 1 jour</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 100 Q40 20 70 80 T130 30 T190 90" fill="none" stroke="#E4002B" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Route des Sommets</h3>
+              <span class="badge badge--hard">Difficile</span>
+            </div>
+            <p class="card__text">Virages serrés dans les Cantons-de-l'Est. Technique et exigeante, mais incroyablement gratifiante.</p>
+          </div>
+          <div class="card__footer">
+            <span>168 km · demi-journée</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 90 Q100 10 190 90" fill="none" stroke="#FF6B35" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Route 327 — Mont-Tremblant</h3>
+              <span class="badge badge--medium">Modérée</span>
+            </div>
+            <p class="card__text">Forêt dense et lacs à perte de vue autour du parc national. Idéal pour une escapade d'une journée.</p>
+          </div>
+          <div class="card__footer">
+            <span>60 km · demi-journée</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 100 Q60 10 100 70 T190 20" fill="none" stroke="#E4002B" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Route 362 — Charlevoix</h3>
+              <span class="badge badge--hard">Difficile</span>
+            </div>
+            <p class="card__text">Dénivelés impressionnants entre Baie-Saint-Paul et La Malbaie, avec vue sur le fleuve.</p>
+          </div>
+          <div class="card__footer">
+            <span>105 km · demi-journée</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+
+        <article class="col-span-12 sm:col-span-6 lg:col-span-4 card reveal" data-reveal>
+          <div class="card__media">
+            <svg viewBox="0 0 200 120" class="h-full w-full" aria-hidden="true"><rect width="200" height="120" fill="#0D0D0D"/><path d="M10 70 H190" stroke="#FF6B35" stroke-width="4"/></svg>
+          </div>
+          <div class="card__body">
+            <div class="flex items-center justify-between">
+              <h3 class="card__title">Route du Fjord — Saguenay</h3>
+              <span class="badge badge--medium">Modérée</span>
+            </div>
+            <p class="card__text">Falaises spectaculaires le long du fjord. Prévoyez des arrêts photo, vous en aurez besoin.</p>
+          </div>
+          <div class="card__footer">
+            <span>210 km · 1 jour</span>
+            <a href="#" class="text-racing-orange hover:text-racing-red">Voir la vidéo →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= VIDEO VEDETTE ================= -->
+    <section class="bg-racing-dark py-16" aria-labelledby="vedette-title">
+      <div class="mx-auto grid max-w-7xl grid-cols-12 items-center gap-8 px-4 sm:px-6">
+        <div class="col-span-12 lg:col-span-6 reveal" data-reveal>
+          <span class="hero__eyebrow">Vidéo vedette</span>
+          <h2 id="vedette-title" class="section-title mt-3">La Route 362 de Charlevoix en 4K</h2>
+          <p class="section-subtitle mt-3">
+            Ma vidéo la plus regardée à ce jour : 45 minutes de virages, de côtes et de vues sur le fleuve Saint-Laurent,
+            filmées sur trois jours de tournage. Une route que je recommande à tout motocycliste intermédiaire ou avancé.
+          </p>
+          <a href="#" class="btn btn--primary mt-6">Regarder sur YouTube</a>
+        </div>
+        <div class="col-span-12 lg:col-span-6 reveal" data-reveal>
+          <div class="card group">
+            <div class="card__media !h-64">
+              <svg viewBox="0 0 300 180" class="h-full w-full" aria-hidden="true">
+                <rect width="300" height="180" fill="#0D0D0D"/>
+                <path d="M0 150 Q150 20 300 150" fill="none" stroke="#E4002B" stroke-width="5"/>
+                <circle cx="150" cy="90" r="6" fill="#FF6B35"/>
+              </svg>
+              <button type="button" class="card__play absolute h-16 w-16" aria-label="Lire la vidéo vedette : Route 362 de Charlevoix">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h2 class="footer__heading">RPM Québec</h2>
+        <p class="text-sm text-racing-text/70">Le site compagnon de la chaîne YouTube RPM Québec : routes, tutoriels et sécurité moto.</p>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__heading">Navigation</h2>
+        <a href="index.html" class="footer__link">Accueil</a>
+        <a href="routes.html" class="footer__link">Routes</a>
+        <a href="tutoriels.html" class="footer__link">Tutoriels &amp; Conseils</a>
+        <a href="permis.html" class="footer__link">Permis &amp; Réglementation</a>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__heading">Projet</h2>
+        <a href="https://github.com/camilosolano13/TP3_SolanoCamilo" class="footer__link" target="_blank" rel="noopener">Code source (GitHub)</a>
+        <a href="https://camilosolano13.github.io/TP3_SolanoCamilo/" class="footer__link" target="_blank" rel="noopener">Site hébergé (GitHub Pages)</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h2 class="footer__heading">Suivez la chaîne</h2>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="YouTube RPM Québec"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.4-.4-5a3 3 0 0 0-2.1-2.1C18.9 4.5 12 4.5 12 4.5s-6.9 0-8.5.4A3 3 0 0 0 1.4 7C1 8.6 1 12 1 12s0 3.4.4 5a3 3 0 0 0 2.1 2.1c1.6.4 8.5.4 8.5.4s6.9 0 8.5-.4A3 3 0 0 0 22.6 17c.4-1.6.4-5 .4-5ZM9.8 15.5v-7l6 3.5Z"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="Instagram RPM Québec"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="footer__social-link" aria-label="TikTok RPM Québec"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3v10.5a2.5 2.5 0 1 1-2-2.45V9a4.5 4.5 0 1 0 4 4.47V8a5.5 5.5 0 0 0 4 1.7V7.6A3.5 3.5 0 0 1 16.9 4H14Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__bottom">&copy; 2026 RPM Québec — Camilo Solano. Projet réalisé dans le cadre du cours Technique d'intégration des interfaces Web 2.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
