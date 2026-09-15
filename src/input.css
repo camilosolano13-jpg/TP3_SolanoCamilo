@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-racing-black text-racing-text font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-wide;
+  }
+  :focus-visible {
+    outline: 3px solid #FF6B35;
+    outline-offset: 2px;
+  }
+  ::selection {
+    background-color: #E4002B;
+    color: #F5F5F5;
+  }
+}
+
+/* =========================================================
+   BEM Components
+   Inspired by Flowbite (https://flowbite.com) Navbar, Card and
+   Accordion patterns, rebuilt from scratch as BEM blocks and
+   styled with Tailwind @apply utilities. Sources documented in README.md
+   ========================================================= */
+
+@layer components {
+  /* ---------- Skip link (accessibilite) ---------- */
+  .skip-link {
+    @apply absolute left-2 -top-16 z-50 rounded bg-racing-red px-4 py-2 text-sm font-semibold text-racing-text transition-all duration-200 focus:top-2;
+  }
+
+  /* ---------- Navbar block ---------- */
+  .navbar {
+    @apply sticky top-0 z-40 w-full border-b border-white/10 bg-racing-black/90 backdrop-blur;
+  }
+  .navbar__inner {
+    @apply mx-auto grid max-w-7xl grid-cols-12 items-center gap-4 px-4 py-3 sm:px-6;
+  }
+  .navbar__brand {
+    @apply col-span-8 flex items-center gap-2 font-heading text-xl font-bold text-racing-text sm:col-span-4;
+  }
+  .navbar__brand-accent {
+    @apply text-racing-red;
+  }
+  .navbar__toggle {
+    @apply col-span-4 flex justify-end sm:hidden;
+  }
+  .navbar__toggle-btn {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-racing-text transition-colors hover:border-racing-red hover:text-racing-red;
+  }
+  .navbar__menu {
+    @apply col-span-12 hidden flex-col gap-1 pb-2 sm:col-span-8 sm:flex sm:flex-row sm:justify-end sm:gap-2 sm:pb-0;
+  }
+  .navbar__menu--open {
+    @apply flex;
+  }
+  .navbar__link {
+    @apply rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-racing-text/80 transition-colors duration-200 hover:bg-white/5 hover:text-racing-orange;
+  }
+  .navbar__link--active {
+    @apply text-racing-red hover:text-racing-red;
+  }
+
+  /* ---------- Button block ---------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-heading text-base font-semibold uppercase tracking-wide transition-all duration-200 focus-visible:outline-racing-orange;
+  }
+  .btn--primary {
+    @apply bg-racing-red text-racing-text shadow-lg shadow-racing-red/30 hover:bg-racing-orange hover:shadow-racing-orange/40;
+  }
+  .btn--outline {
+    @apply border-2 border-racing-red text-racing-text hover:bg-racing-red;
+  }
+  .btn--ghost {
+    @apply text-racing-orange hover:text-racing-red;
+  }
+  .btn--block {
+    @apply w-full;
+  }
+
+  /* ---------- Hero block ---------- */
+  .hero {
+    @apply relative overflow-hidden bg-racing-dark;
+  }
+  .hero__overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-racing-black via-racing-black/70 to-racing-black/20;
+  }
+  .hero__grid {
+    @apply relative z-10 mx-auto grid max-w-7xl grid-cols-12 items-center gap-6 px-4 py-20 sm:px-6 sm:py-28;
+  }
+  .hero__content {
+    @apply col-span-12 lg:col-span-7;
+  }
+  .hero__eyebrow {
+    @apply mb-3 inline-block rounded-full border border-racing-red px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-racing-orange;
+  }
+  .hero__title {
+    @apply text-4xl font-bold leading-tight text-racing-text sm:text-5xl lg:text-6xl;
+  }
+  .hero__title-accent {
+    @apply text-racing-red;
+  }
+  .hero__subtitle {
+    @apply mt-4 max-w-xl text-base text-racing-text/80 sm:text-lg;
+  }
+  .hero__actions {
+    @apply mt-8 flex flex-col gap-3 sm:flex-row;
+  }
+
+  /* ---------- Card block ---------- */
+  .card {
+    @apply flex flex-col overflow-hidden rounded-lg border border-white/10 bg-racing-dark transition-transform duration-300 hover:-translate-y-1 hover:border-racing-red/60;
+  }
+  .card__media {
+    @apply relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br from-racing-black to-racing-dark;
+  }
+  .card__play {
+    @apply flex h-12 w-12 items-center justify-center rounded-full bg-racing-red/90 text-racing-text shadow-lg transition-transform duration-300 group-hover:scale-110;
+  }
+  .card__body {
+    @apply flex flex-1 flex-col gap-2 p-5;
+  }
+  .card__meta {
+    @apply text-xs font-semibold uppercase tracking-wider text-racing-orange;
+  }
+  .card__title {
+    @apply text-lg font-semibold text-racing-text;
+  }
+  .card__text {
+    @apply text-sm text-racing-text/70;
+  }
+  .card__footer {
+    @apply mt-auto flex items-center justify-between border-t border-white/10 px-5 py-3 text-xs text-racing-text/60;
+  }
+
+  /* ---------- Badge block (difficulte des routes) ---------- */
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+  }
+  .badge--easy {
+    @apply bg-green-500/15 text-green-400;
+  }
+  .badge--medium {
+    @apply bg-racing-orange/15 text-racing-orange;
+  }
+  .badge--hard {
+    @apply bg-racing-red/15 text-racing-red;
+  }
+
+  /* ---------- Tag block (categories tutoriels) ---------- */
+  .tag {
+    @apply cursor-pointer select-none rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-racing-text/80 transition-colors duration-200 hover:border-racing-red hover:text-racing-red;
+  }
+  .tag--active {
+    @apply border-racing-red bg-racing-red/10 text-racing-red;
+  }
+
+  /* ---------- Section helpers ---------- */
+  .section-title {
+    @apply text-3xl font-bold text-racing-text sm:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-2 max-w-2xl text-racing-text/70;
+  }
+
+  /* ---------- Accordion block (FAQ) ---------- */
+  .accordion__item {
+    @apply border-b border-white/10;
+  }
+  .accordion__button {
+    @apply flex w-full items-center justify-between gap-4 py-5 text-left font-heading text-lg font-semibold text-racing-text transition-colors hover:text-racing-red;
+  }
+  .accordion__icon {
+    @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-racing-red text-racing-red transition-transform duration-300;
+  }
+  .accordion__icon--open {
+    @apply rotate-45 bg-racing-red text-racing-text;
+  }
+  .accordion__panel {
+    @apply grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out;
+  }
+  .accordion__panel--open {
+    @apply grid-rows-[1fr];
+  }
+  .accordion__panel-inner {
+    @apply min-h-0 overflow-hidden pb-5 text-racing-text/75;
+  }
+
+  /* ---------- Form block ---------- */
+  .form__group {
+    @apply flex flex-col gap-1.5;
+  }
+  .form__label {
+    @apply text-sm font-semibold text-racing-text;
+  }
+  .form__required {
+    @apply text-racing-red;
+  }
+  .form__input,
+  .form__textarea,
+  .form__select {
+    @apply w-full rounded-md border border-white/15 bg-racing-black px-4 py-2.5 text-racing-text placeholder:text-racing-text/40 focus:border-racing-red focus:outline-none focus:ring-2 focus:ring-racing-red/40;
+  }
+  .form__group--invalid .form__input,
+  .form__group--invalid .form__textarea,
+  .form__group--invalid .form__select {
+    @apply border-racing-red ring-2 ring-racing-red/40;
+  }
+  .form__error {
+    @apply hidden text-xs font-medium text-racing-red;
+  }
+  .form__group--invalid .form__error {
+    @apply block;
+  }
+  .form__checkbox-row {
+    @apply flex items-start gap-2;
+  }
+  .form__checkbox {
+    @apply mt-1 h-4 w-4 shrink-0 rounded border-white/30 bg-racing-black text-racing-red focus:ring-racing-red;
+  }
+  .form__radio-group {
+    @apply flex flex-wrap gap-4;
+  }
+  .form__radio-row {
+    @apply flex items-center gap-2;
+  }
+  .form__radio {
+    @apply h-4 w-4 border-white/30 bg-racing-black text-racing-red focus:ring-racing-red;
+  }
+  .form__status {
+    @apply hidden rounded-md border px-4 py-3 text-sm;
+  }
+  .form__status--success {
+    @apply block border-green-500/40 bg-green-500/10 text-green-400;
+  }
+  .form__status--error {
+    @apply block border-racing-red/40 bg-racing-red/10 text-racing-red;
+  }
+
+  /* ---------- Footer block ---------- */
+  .footer {
+    @apply border-t border-white/10 bg-racing-dark;
+  }
+  .footer__grid {
+    @apply mx-auto grid max-w-7xl grid-cols-12 gap-8 px-4 py-12 sm:px-6;
+  }
+  .footer__col {
+    @apply col-span-12 sm:col-span-6 lg:col-span-3;
+  }
+  .footer__heading {
+    @apply mb-3 font-heading text-sm font-bold uppercase tracking-wider text-racing-orange;
+  }
+  .footer__link {
+    @apply block py-1 text-sm text-racing-text/70 transition-colors hover:text-racing-red;
+  }
+  .footer__social {
+    @apply flex gap-3;
+  }
+  .footer__social-link {
+    @apply flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-racing-text/80 transition-all duration-200 hover:-translate-y-1 hover:border-racing-red hover:text-racing-red;
+  }
+  .footer__bottom {
+    @apply border-t border-white/10 py-6 text-center text-xs text-racing-text/50;
+  }
+
+  /* ---------- Reveal on scroll (JS toggled) ---------- */
+  .reveal {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+  .reveal--visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* ---------- Stat / pricing block (page permis) ---------- */
+  .stat {
+    @apply rounded-lg border border-white/10 bg-racing-dark p-6 text-center;
+  }
+  .stat__value {
+    @apply font-heading text-3xl font-bold text-racing-red;
+  }
+  .stat__label {
+    @apply mt-1 text-sm uppercase tracking-wide text-racing-text/60;
+  }
+
+  /* ---------- Timeline block (etapes permis) ---------- */
+  .timeline__item {
+    @apply relative border-l-2 border-racing-red/40 pl-6 pb-8 last:pb-0;
+  }
+  .timeline__dot {
+    @apply absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 border-racing-red bg-racing-black;
+  }
+  .timeline__title {
+    @apply font-heading text-lg font-semibold text-racing-text;
+  }
+  .timeline__text {
+    @apply mt-1 text-sm text-racing-text/70;
+  }
+}
+
+@layer utilities {
+  .speed-lines::before,
+  .speed-lines::after {
+    content: "";
+    @apply absolute h-[2px] w-1/3 bg-racing-orange/70 animate-speed-lines;
+  }
+  .speed-lines::after {
+    animation-delay: 0.6s;
+    @apply top-2/3;
+  }
+  .speed-lines::before {
+    @apply top-1/3;
+  }
+}

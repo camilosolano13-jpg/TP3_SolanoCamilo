@@ -1,0 +1,17 @@
+{
+  "name": "tp3_solanocamilo",
+  "version": "1.0.0",
+  "description": "Site web d'accompagnement pour une chaine YouTube de motos - Travail Pratique 3",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch"
+  },
+  "keywords": ["moto", "tailwindcss", "pwa", "bem"],
+  "author": "Camilo Solano",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
