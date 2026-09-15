@@ -1,0 +1,55 @@
+{
+  "name": "RPM Québec — Motos, routes et vitesse",
+  "short_name": "RPM Québec",
+  "description": "Site compagnon de la chaîne YouTube RPM Québec : routes recommandées, tutoriels d'entretien et de conduite, sécurité et réglementation moto au Québec.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0D0D0D",
+  "theme_color": "#0D0D0D",
+  "lang": "fr-CA",
+  "dir": "ltr",
+  "categories": ["lifestyle", "sports", "entertainment"],
+  "icons": [
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-192-any.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512-any.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/accueil.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Page d'accueil de RPM Québec"
+    }
+  ]
+}

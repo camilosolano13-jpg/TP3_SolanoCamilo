@@ -50,11 +50,11 @@
     <!-- ================= CATEGORIES ================= -->
     <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6" aria-labelledby="categories-title">
       <h2 id="categories-title" class="section-title reveal" data-reveal>Catégories de tutoriels</h2>
-      <div class="mt-6 flex flex-wrap gap-3 reveal" data-reveal role="tablist" aria-label="Filtrer les tutoriels par catégorie">
-        <button type="button" class="tag tag--active" data-filter="all" role="tab" aria-selected="true">Tous</button>
-        <button type="button" class="tag" data-filter="entretien" role="tab" aria-selected="false">Entretien</button>
-        <button type="button" class="tag" data-filter="conduite" role="tab" aria-selected="false">Conduite</button>
-        <button type="button" class="tag" data-filter="securite" role="tab" aria-selected="false">Sécurité</button>
+      <div class="mt-6 flex flex-wrap gap-3 reveal" data-reveal role="group" aria-label="Filtrer les tutoriels par catégorie">
+        <button type="button" class="tag tag--active" data-filter="all" aria-pressed="true">Tous</button>
+        <button type="button" class="tag" data-filter="entretien" aria-pressed="false">Entretien</button>
+        <button type="button" class="tag" data-filter="conduite" aria-pressed="false">Conduite</button>
+        <button type="button" class="tag" data-filter="securite" aria-pressed="false">Sécurité</button>
       </div>
 
       <div class="mt-8 grid grid-cols-12 gap-6" id="tutoGrid">
