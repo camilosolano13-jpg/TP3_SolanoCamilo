@@ -18,6 +18,12 @@
     outline: 3px solid #FF6B35;
     outline-offset: 2px;
   }
+  @media (prefers-reduced-motion: reduce) {
+    .navbar__tron-line,
+    .navbar__tron-head {
+      display: none;
+    }
+  }
   ::selection {
     background-color: #E4002B;
     color: #F5F5F5;
@@ -39,31 +45,39 @@
 
   /* ---------- Navbar block ---------- */
   .navbar {
-    @apply sticky top-0 z-40 w-full border-b border-white/10 bg-racing-black/90 backdrop-blur;
+    @apply relative z-40 w-full border-b border-white/10 bg-racing-black/90 backdrop-blur;
   }
   .navbar__inner {
     @apply mx-auto grid max-w-7xl grid-cols-12 items-center gap-4 px-4 py-3 sm:px-6;
   }
   .navbar__brand {
-    @apply col-span-8 flex items-center gap-2 font-heading text-xl font-bold text-racing-text sm:col-span-4;
+    @apply col-span-8 flex items-center gap-2 font-heading text-xl font-bold text-racing-text lg:col-span-4;
   }
   .navbar__brand-accent {
     @apply text-racing-red;
   }
   .navbar__toggle {
-    @apply col-span-4 flex justify-end sm:hidden;
+    @apply col-span-4 flex justify-end lg:hidden;
   }
   .navbar__toggle-btn {
     @apply inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-racing-text transition-colors hover:border-racing-red hover:text-racing-red;
   }
   .navbar__menu {
-    @apply col-span-12 hidden flex-col gap-1 pb-2 sm:col-span-8 sm:flex sm:flex-row sm:justify-end sm:gap-2 sm:pb-0;
+    @apply col-span-12 hidden flex-col gap-1 pb-2 lg:col-span-8 lg:flex lg:flex-row lg:flex-nowrap lg:justify-end lg:gap-1 lg:pb-0;
   }
   .navbar__menu--open {
     @apply flex;
   }
   .navbar__link {
-    @apply rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-racing-text/80 transition-colors duration-200 hover:bg-white/5 hover:text-racing-orange;
+    @apply whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-semibold uppercase tracking-wider text-racing-text/80 transition-colors duration-200 hover:bg-white/5 hover:text-racing-orange;
+  }
+  .navbar__tron-line {
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 animate-tron-trail;
+    background: linear-gradient(to right, transparent, #E4002B 15%, #FF6B35 50%, #E4002B 85%, transparent);
+  }
+  .navbar__tron-head {
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text animate-tron-sweep;
+    box-shadow: 0 0 8px 2px #FF6B35, 0 0 16px 4px #E4002B;
   }
   .navbar__link--active {
     @apply text-racing-red hover:text-racing-red;
