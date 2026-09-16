@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
 
+@property --tron-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes tron-spin {
+  to {
+    --tron-angle: 360deg;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +21,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-racing-black text-racing-text font-body;
+    @apply overflow-x-hidden bg-racing-black text-racing-text font-body;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-wide;
@@ -45,7 +57,7 @@
 
   /* ---------- Navbar block ---------- */
   .navbar {
-    @apply relative z-40 w-full border-b border-white/10 bg-racing-black/90 backdrop-blur;
+    @apply relative z-40 w-full overflow-hidden border-b border-white/10 bg-racing-black/90 backdrop-blur;
   }
   .navbar__inner {
     @apply mx-auto grid max-w-7xl grid-cols-12 items-center gap-4 px-4 py-3 sm:px-6;
@@ -131,10 +143,27 @@
 
   /* ---------- Card block ---------- */
   .card {
-    @apply flex flex-col overflow-hidden rounded-lg border border-white/10 bg-racing-dark transition-transform duration-300 hover:-translate-y-1 hover:border-racing-red/60;
+    @apply flex flex-col overflow-hidden rounded-lg border border-transparent bg-racing-dark transition-transform duration-300 hover:-translate-y-1;
+    background:
+      linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+      linear-gradient(rgba(245, 245, 245, 0.1), rgba(245, 245, 245, 0.1)) border-box;
+  }
+  .card:hover {
+    background:
+      linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+      conic-gradient(from var(--tron-angle, 0deg), transparent 0deg, #ff6b35 30deg, #e4002b 60deg, transparent 110deg, transparent 360deg) border-box;
+    animation: tron-spin 2.5s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card:hover {
+      animation: none;
+      background:
+        linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+        linear-gradient(#e4002b, #e4002b) border-box;
+    }
   }
   .card__media {
-    @apply relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br from-racing-black to-racing-dark;
+    @apply relative flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-racing-black to-racing-dark;
   }
   .card__play {
     @apply flex h-12 w-12 items-center justify-center rounded-full bg-racing-red/90 text-racing-text shadow-lg transition-transform duration-300 group-hover:scale-110;

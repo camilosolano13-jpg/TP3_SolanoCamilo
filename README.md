@@ -58,9 +58,11 @@ Composants construits à la main en classes BEM stylées avec `@apply` (Tailwind
    Technique inspirée de l'article [*Animate elements as they scroll into view* — web.dev](https://web.dev/articles/intersectionobserver-v2).
 2. **Accordéon FAQ animé** (`permis.html`) : transition CSS fluide de `grid-template-rows` (0fr → 1fr) pour ouvrir/fermer chaque réponse, technique du ["CSS grid trick" pour animer une hauteur automatique](https://css-tricks.com/using-css-transitions-auto-dimensions/).
 3. **Pulsation lumineuse du bouton principal** (`animate-pulse-glow`, `tailwind.config.js`) : keyframe Tailwind personnalisée simulant un halo qui pulse, sur le bouton d'appel à l'action de la page d'accueil.
-4. *(bonus)* **Lignes de vitesse animées** dans le hero de l'accueil (`.speed-lines`, keyframe `speed-lines`) et effet de survol des cards (translation + bordure), créations personnelles inspirées de l'esthétique course automobile/moto.
+4. *(bonus)* **Lignes de vitesse animées** dans le hero de l'accueil (`.speed-lines`, keyframe `speed-lines`), création personnelle inspirée de l'esthétique course automobile/moto.
+5. *(bonus)* **Balayage lumineux du navbar** (`.navbar__tron-line` / `.navbar__tron-head`, keyframes `tron-sweep` / `tron-trail`) : une « moto de lumière » traverse le navbar en boucle et laisse une traînée dégradée qui s'estompe, inspirée de l'esthétique *Tron*.
+6. *(bonus)* **Bordure rotative au survol des cartes** (`.card:hover`, keyframe `tron-spin`) : un anneau dégradé rouge/orange tourne autour de la carte au survol, réalisé avec un `conic-gradient()` animé via une propriété CSS personnalisée enregistrée (`@property --tron-angle`), technique documentée dans [*Animating gradients with @property* — web.dev](https://web.dev/articles/at-property).
 
-Toutes les animations respectent `prefers-reduced-motion` implicitement via des durées courtes ; le contenu reste visible sans JavaScript grâce à une règle `<noscript>` qui neutralise l'effet de révélation.
+Toutes les animations respectent `prefers-reduced-motion` (désactivées ou remplacées par un état statique) ; le contenu reste visible sans JavaScript grâce à une règle `<noscript>` qui neutralise l'effet de révélation.
 
 ## PWA (Progressive Web App)
 
