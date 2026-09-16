@@ -98,7 +98,7 @@
   }
   .tron-divider__line {
     @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0;
-    background: linear-gradient(to right, transparent, #1668c1 15%, #f5f5f5 50%, #e4002b 85%, transparent);
+    background: linear-gradient(to right, transparent, #1668c1 15%, #0511b5 50%, #e4002b 85%, transparent);
     animation: tron-trail 9s ease-in-out infinite;
   }
   .tron-divider__head {
@@ -120,7 +120,7 @@
   .section-title--tron::before {
     content: "";
     @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 animate-tron-trail;
-    background: linear-gradient(to right, transparent, #1668c1 15%, #f5f5f5 50%, #e4002b 85%, transparent);
+    background: linear-gradient(to right, transparent, #1668c1 15%, #0511b5 50%, #e4002b 85%, transparent);
   }
   .section-title--tron::after {
     content: "";
