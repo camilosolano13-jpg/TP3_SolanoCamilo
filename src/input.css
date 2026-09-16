@@ -88,7 +88,7 @@
     background: linear-gradient(to right, transparent, #E4002B 15%, #FF6B35 50%, #E4002B 85%, transparent);
   }
   .navbar__tron-head {
-    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text animate-tron-sweep;
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-orange animate-tron-sweep;
     box-shadow: 0 0 8px 2px #FF6B35, 0 0 16px 4px #E4002B;
   }
 
@@ -102,7 +102,7 @@
     animation: tron-trail 9s ease-in-out infinite;
   }
   .tron-divider__head {
-    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text;
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-orange;
     animation: tron-sweep 9s ease-in-out infinite;
     box-shadow: 0 0 8px 2px #1668c1, 0 0 16px 4px #e4002b;
   }
@@ -124,7 +124,7 @@
   }
   .section-title--tron::after {
     content: "";
-    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text animate-tron-sweep;
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-orange animate-tron-sweep;
     box-shadow: 0 0 8px 2px #1668c1, 0 0 16px 4px #e4002b;
   }
   @media (prefers-reduced-motion: reduce) {
