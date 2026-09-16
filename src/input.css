@@ -91,6 +91,48 @@
     @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text animate-tron-sweep;
     box-shadow: 0 0 8px 2px #FF6B35, 0 0 16px 4px #E4002B;
   }
+
+  /* ---------- Separateur Tron entre sections (couleurs du casque : bleu/blanc/rouge) ---------- */
+  .tron-divider {
+    @apply relative h-px w-full overflow-hidden;
+  }
+  .tron-divider__line {
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0;
+    background: linear-gradient(to right, transparent, #1668c1 15%, #f5f5f5 50%, #e4002b 85%, transparent);
+    animation: tron-trail 9s ease-in-out infinite;
+  }
+  .tron-divider__head {
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text;
+    animation: tron-sweep 9s ease-in-out infinite;
+    box-shadow: 0 0 8px 2px #1668c1, 0 0 16px 4px #e4002b;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tron-divider__line,
+    .tron-divider__head {
+      display: none;
+    }
+  }
+
+  /* ---------- Sous-titre anime Tron (Qui suis-je / Mon histoire) ---------- */
+  .section-title--tron {
+    @apply relative inline-block pb-3;
+  }
+  .section-title--tron::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 animate-tron-trail;
+    background: linear-gradient(to right, transparent, #1668c1 15%, #f5f5f5 50%, #e4002b 85%, transparent);
+  }
+  .section-title--tron::after {
+    content: "";
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-text animate-tron-sweep;
+    box-shadow: 0 0 8px 2px #1668c1, 0 0 16px 4px #e4002b;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .section-title--tron::before,
+    .section-title--tron::after {
+      display: none;
+    }
+  }
   .navbar__link--active {
     @apply text-racing-red hover:text-racing-red;
   }
@@ -143,19 +185,23 @@
 
   /* ---------- Card block ---------- */
   .card {
-    @apply flex flex-col overflow-hidden rounded-lg border border-transparent bg-racing-dark transition-transform duration-300 hover:-translate-y-1;
+    @apply flex flex-col overflow-hidden rounded-lg border border-transparent bg-racing-dark transition-transform duration-300 hover:-translate-y-1 active:-translate-y-1;
     background:
       linear-gradient(#1a1a1a, #1a1a1a) padding-box,
       linear-gradient(rgba(245, 245, 245, 0.1), rgba(245, 245, 245, 0.1)) border-box;
   }
-  .card:hover {
+  .card:hover,
+  .card:active,
+  .card:focus-visible {
     background:
       linear-gradient(#1a1a1a, #1a1a1a) padding-box,
       conic-gradient(from var(--tron-angle, 0deg), transparent 0deg, #ff6b35 30deg, #e4002b 60deg, transparent 110deg, transparent 360deg) border-box;
     animation: tron-spin 2.5s linear infinite;
   }
   @media (prefers-reduced-motion: reduce) {
-    .card:hover {
+    .card:hover,
+    .card:active,
+    .card:focus-visible {
       animation: none;
       background:
         linear-gradient(#1a1a1a, #1a1a1a) padding-box,
