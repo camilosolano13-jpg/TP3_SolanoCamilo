@@ -5,7 +5,7 @@
  * cache (puis sur offline.html) pour les pages HTML, afin que le site reste
  * pleinement utilisable hors-ligne.
  */
-const CACHE_NAME = "camibike360-v2";
+const CACHE_NAME = "camibike360-v3";
 const OFFLINE_URL = "offline.html";
 
 const PRECACHE_URLS = [
