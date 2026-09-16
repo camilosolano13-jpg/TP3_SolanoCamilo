@@ -92,19 +92,26 @@
     box-shadow: 0 0 8px 2px #FF6B35, 0 0 16px 4px #E4002B;
   }
 
-  /* ---------- Separateur Tron entre sections (couleurs du casque : bleu/blanc/rouge) ---------- */
+  /* ---------- Separateur Tron entre sections (couleurs du casque : bleu/rouge) ---------- */
+  /* Se joue une seule fois lorsque le separateur devient visible au defilement
+     (classe "reveal--visible" ajoutee par l'IntersectionObserver de js/main.js
+     via l'attribut data-reveal), plutot qu'en boucle infinie. */
   .tron-divider {
     @apply relative h-px w-full overflow-hidden;
   }
   .tron-divider__line {
     @apply pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0;
     background: linear-gradient(to right, transparent, #1668c1 15%, #0511b5 50%, #e4002b 85%, transparent);
-    animation: tron-trail 9s ease-in-out infinite;
   }
   .tron-divider__head {
-    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-orange;
-    animation: tron-sweep 9s ease-in-out infinite;
+    @apply pointer-events-none absolute bottom-[-1px] left-[-10%] h-1 w-[8%] rounded-full bg-racing-orange opacity-0;
     box-shadow: 0 0 8px 2px #1668c1, 0 0 16px 4px #e4002b;
+  }
+  .tron-divider.reveal--visible .tron-divider__line {
+    animation: tron-trail 2.2s ease-in-out 1 forwards;
+  }
+  .tron-divider.reveal--visible .tron-divider__head {
+    animation: tron-sweep 2.2s ease-in-out 1 forwards;
   }
   @media (prefers-reduced-motion: reduce) {
     .tron-divider__line,
